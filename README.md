@@ -1,2 +1,2 @@
 # myblog
-Proyecto Blog Personal Curso Django
+Proyecto Blog Personal (Django)
