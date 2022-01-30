@@ -1,4 +1,3 @@
-#
 from django.urls import path
 from . import views
 
@@ -6,8 +5,13 @@ app_name = "home_app"
 
 urlpatterns = [
     path(
-        'plantilla/', 
-        views.TestPlantilla.as_view(),
-        name='plantilla',
+        '', 
+        views.HomePageView.as_view(),
+        name='home',
+    ),
+    path(
+        'register-suscription/', 
+        views.SuscripberCreateView.as_view(),
+        name='add-suscription',
     ),  
 ]

@@ -14,7 +14,7 @@ DATABASES = {
         'USER': get_secret('USER'),
         'PASSWORD': get_secret('PASSWORD'),
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': '5433',
     }
 }
 # Static files (CSS, JavaScript, Images)
@@ -32,3 +32,19 @@ MEDIA_ROOT = BASE_DIR.child('media')
 # EMAIL_HOST_USER = get_secret('EMAIL')
 # EMAIL_HOST_PASSWORD = get_secret('PASS_EMAIL')
 # EMAIL_PORT = 587
+
+# ckeditor settings
+DJANGO_WYSIWYG_FLAVOR = "ckeditor"
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+CKEDITOR_RESTRICT_BY_USER = True
+CKEDITOR_BROWSE_SHOW_DIRS = True # Shows directory of image in the server
+CKEDITOR_RESTRICT_BY_DATE = True # Arranges image in terms of date uploaded
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+
+CKEDITOR_CONFIGS = {
+    'default' : {
+        'toolbar' : None,
+        'extraPlugins' : 'codesnippet',
+    }
+}

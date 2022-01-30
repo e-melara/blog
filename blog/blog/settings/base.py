@@ -40,9 +40,14 @@ DJANGO_APPS = (
 LOCAL_APPS = (
     'applications.users',
     'applications.home',
+    'applications.entrada',
+    'applications.favoritos',
 )
 
-THIRD_PARTY_APPS = ()
+THIRD_PARTY_APPS = (
+    'ckeditor',
+    'ckeditor_uploader',
+)
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
@@ -69,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'applications.procesors.home_contact',
             ],
         },
     },
@@ -109,3 +115,5 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
