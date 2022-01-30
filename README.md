@@ -1,2 +1,2 @@
-# myblog
+# Blog
 Proyecto Blog Personal (Django)

@@ -4,6 +4,7 @@ from django.conf import settings
 from model_utils.models import TimeStampedModel
 
 from applications.entrada.models import Entry
+from .managers import FavoritosManager
 
 class Favorites(TimeStampedModel):
     user = models.ForeignKey(
@@ -16,6 +17,8 @@ class Favorites(TimeStampedModel):
         related_name='entry_favorites',
         on_delete=models.CASCADE
     )
+    
+    objects = FavoritosManager()
     
     class Meta:
         unique_together = ('user', 'entry') # para que no se repita una entrada en la db del mismo usuario
